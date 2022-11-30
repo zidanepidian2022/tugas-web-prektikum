@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><praktikum9 class="2"></praktikum9></title>
+</head>
+<body>
+    <h2>dollar ke rupiah</h2>
+
+    <form>
+        dollar : <input type="number" id="dollar">
+        <br>
+        kurs rupiah : <input type="number" id="rupiah" value="14650">
+        <br>
+        <input type="button" value="hitung" onclick="hitung_dolar();">
+        <br>
+        hasil : <input type="text" id="hasil">
+    </form>
+    <!--rupiah ke dollar-->
+    <h2>rupiah ke dollar</h2>
+
+    <form>
+        Rupiah : <input type="number" id="Rupiah">
+        <br>
+        <input type="button"  value="Hitung" onclick="hitung_rupiah();">
+        <br>
+        Dollar : <input type="text" id="Dollar">
+    </form>
+    <script>
+        //fungsi hitung rupiah ke dollar
+        function hitung_rupiah() {
+            let R = document.getElementById("Rupiah").value;
+            let H = R * (1/14650);
+            document.getElementById("Dollar").value = "$" + H.toFixed(2);
+
+            
+        }
+    </script>
+    <script>
+        // fungsi hitung dollar ke rupiah
+        function hitung_dolar() {
+            //tangkap nilai input dollar ke variabel d
+            let d = document.getElementById("dollar").value;
+
+            let r = document.getElementById("rupiah").value;
+            let h = d * r;
+            document.getElementById("hasil").value = "Rp." + h;
+        }
+    </script> 
+</body>
+</html>

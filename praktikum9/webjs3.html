@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function tebak(){
+        let bilangan1 = document.getElementById("bill1").value;
+
+        //bilangan random dari 0-9
+        let bilrandom = Math.floor(Math.random() * 10);
+        let hasilcek = (bilangan1 == bilrandom); //boolean
+        console.log("bilangan1 : " + bilangan1);
+        console.log("bilrandom : " + bilrandom);
+        console.log("hasilcek : " + hasilcek);
+
+        //alert("bilangan inputan adalah" + "bilangan1 + "\n random + bilrandom);
+        let hasil = document.getElementById("haisl");
+        let txthasil = (hasilcek) ? "benar":  "salah";
+        hasil.innerHTML = "tebakan anda" + txthasil;
+        if(hasilcek){
+            hasil.style.background="yellow";
+            hasil.style.color="blue";
+        }else{
+            hasil.style.background="red";
+            hasil.style.color="blue";
+        }
+        }
+    </script>
+
+</head>
+<body>
+    <span id="hasil"></span>
+    <br/>
+    masukan angka(0-9):
+    <input type="number" id="bil1" value="" size="10"/>
+    <button onclick="tebak()">tebak angka</button>
+    <br/>
+    <span id="hasil"></span>
+    
+</body>
+</html>

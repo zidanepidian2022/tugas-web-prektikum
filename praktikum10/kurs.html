@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Konvensi mata uang</title>
+</head>
+<body>
+    <form style="background-color: rgb(0, 195, 255);">
+        <fieldset>
+            <legend>kurs rupiah - mata uang asing</legend>
+            <table border="1">
+                <thead>
+                    <th>masukan nilai</th>
+                    <th>mata uang</th>
+                    <th>nilai rupiah</th>
+                </thead>
+                <tbody>
+                    <td><input type="number" id="uang" onchange="kurs()"></td>
+                    <td>
+                        <select id="pilihan" onchange="kurs()">
+                            <option value=""hidden>---pilih---</option>
+                            <option value="usd">dollar us</option>
+                            <option value="sd">dollar singapore</option>
+                            <option value="rm">ringgir malaysia</option>
+                            <option value="yen">yen jepang</option>
+                            <option value="eu">euro</option>
+                            <option value="riyal">riyal arab saudi</option>
+                        </select>
+                    </td>
+                    <td><input type="text" id="konversi"></td>
+                </tbody>
+            </table>
+        </fieldset>
+    </form>
+
+    <!--kode javascript-->
+    <script>
+        function kurs(){
+            //tangkap nilai input uang ke variabel uang
+            let uang = document.getElementById("uang").value;
+            //tangkap nilai input pilihan simpan ke variabel mata_uang
+            let mata_uang = document.getElementById("pilihan").value;
+            let rumus;
+
+            //buat logic
+            if (mata_uang == "usd") {
+                rumus = uang * 9915;
+                //akses id konversi isi dengan variabel rumus
+                document.getElementById("konversi").value = rumus;
+                
+            } else if( mata_uang =="sd") {
+                rumus = uang * 13472;
+                document.getElementById("konversi").value = rumus;
+            
+            } else if(mata_uang =="rm") {
+                rumus = uang * 874;
+                document.getElementById("konversi").value = rumus;
+
+            } else if(mata_uang == "yen") {
+                rumus = uang * 120;
+                document.getElementById("konversi").value = rumus;
+
+            } else if(mata_uang == "eu") {
+                rumus = uang * 15888;
+                document.getElementById("konversi").value = rumus;
+
+            } else if(mata_uang == "riyal") {
+                rumus = uang * 3592
+                document.getElementById("konversi").value = rumus;
+
+
+            } else {
+                
+            }
+        }
+    </script>
+</body>
+</html>

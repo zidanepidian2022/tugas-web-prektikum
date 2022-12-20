@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascriptt</title>
+    <script>
+        let prodi = {
+            id : 1,
+            kode : "SI",
+            nama : "sistem informasi",
+            kaprodi : "misna azkia M.kom",
+            akreditasi : "baik sekali",
+            cetak : function(){
+                return this.kode + "-" + this.nama
+            }
+        }
+        console.log("kode prodi :" + prodi.kode);
+        console.log("nama prodi :" + prodi.nama);
+       
+
+        function show(){
+            let area = document.getElementById("areprodi");
+            area.innerHTML= prodi1.kode + "-" + prodi1.nama;
+            area.style.color="green";
+            area.style.background="yellow";
+        }
+    </script>
+</head>
+<body>
+    <div id="areaprodi"></div>
+</body>
+</html>

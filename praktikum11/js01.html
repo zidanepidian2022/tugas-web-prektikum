@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>belajar javascript</title>
+    <script>
+        let sayurs = ["bayam","kangkung","toge"];
+        console.log("jumlah sayur : + sayurs.leghth");
+        console.log("sayur ke 2:" + sayurs[1]);
+        sayurs.push("sawi");
+        sayurs.sort();
+        document.write("<ol>")
+        for(i=0 ; i < sayurs.length;i++){
+            console.log("sayur index ke" + i + "adalah : + sayurs[i]");
+            document.write("<li>" + sayurs[i] + "</li>");
+        }
+        document.write("</ol>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
